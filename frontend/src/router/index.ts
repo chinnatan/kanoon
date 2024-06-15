@@ -8,6 +8,18 @@ const routes: RouteRecordRaw[] = [
     component: () => import("@/pages/Login.vue"),
     meta: { title: i18n.global.t("login"), requiresAuth: false },
   },
+  {
+    path: "/home",
+    name: "home",
+    component: () => import("@/pages/Home.vue"),
+    meta: { title: i18n.global.t("menuName.home"), requiresAuth: true },
+  },
+  {
+    path: "/product",
+    name: "product",
+    component: () => import("@/pages//product/Product.vue"),
+    meta: { title: i18n.global.t("menuName.product"), requiresAuth: true },
+  },
 ];
 
 const router = createRouter({

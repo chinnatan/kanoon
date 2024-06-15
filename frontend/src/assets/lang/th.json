@@ -14,45 +14,16 @@
     "passwordIncorrect": "รหัสผ่านไม่ถูกต้อง"
   },
   "menuName": {
-    "home": "หน้าแรก",
-    "repair": "งานซ่อม",
-    "helpDesk": {
-      "head": "Help Desk",
-      "dashboard": "แดชบอร์ด",
-      "report": "แจ้งปัญหา"
-    },
+    "home": "หน้าร้าน",
+    "stock": "คลังสินค้า",
+    "product": "สินค้าทั้งหมด",
     "logout": "ออกจากระบบ"
   },
-  "searchCompany": "ค้นหาบริษัท...",
-  "company": "บริษัท",
-  "startDate": "วันที่เริ่มต้น",
-  "endDate": "วันที่สิ้นสุด",
-  "showInfo": "แสดงข้อมูล",
-  "location": "สถานที่ตั้ง",
-  "searchLocation": "ค้นหาสถานที่ตั้ง...",
-  "department": "แผนก",
-  "searchDepartment": "ค้นหาแผนก...",
-  "repairType": "ประเภทใบงานซ่อม",
-  "searchRepairType": "ค้นหาประเภทใบงานซ่อม...",
-  "deletedRepairHistoryTask": "ลบงานซ่อมทั้งหมด",
-  "deletedRepairHistoryTaskByRepairId": "ลบงานซ่อม",
-  "search": "ค้นหา",
-  "plsWait": "กรุณารอสักครู่...",
-  "confirmDialog": {
-    "msgDefault": "คุณต้องการยืนยันหรือไม่",
-    "yes": "ยืนยัน",
-    "no": "ยกเลิก"
-  },
-  "twoFADialog": {
-    "title": "ยืนยันตัวตนสองขั้น",
-    "subtitle": "Two-Factor Authentication Code",
-    "remark": "**หากใช้งานครั้งแรกกรุณาทำตามขั้นตอนด้านล่าง**",
-    "step1": "1. โหลด Google Authenticator",
-    "step2": "2. เปิด Google Authenticator เพื่อสแกน QR Code ด้านล่าง",
-    "yes": "ยืนยัน"
-  },
-  "otpDialog": {
-    "title": "กรอกรหัส OTP",
-    "ref": "รหัสอ้างอิง"
-  }
+  "createProduct": "เพิ่มสินค้า",
+  "cancel": "ยกเลิก",
+  "add": "เพิ่ม",
+  "productName": "ชื่อสินค้า",
+  "productPrice": "ราคาสินค้า",
+  "productQuantity": "จำนวนสินค้า",
+  "productImage": "รูปภาพสินค้า"
 }

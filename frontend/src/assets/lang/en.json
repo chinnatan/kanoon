@@ -14,45 +14,16 @@
     "passwordIncorrect": "Password incorrect."
   },
   "menuName": {
-    "home": "Home",
-    "repair": "Repair Task",
-    "helpDesk": {
-      "head": "Help Desk",
-      "dashboard": "Dashboard",
-      "report": "Report Issue"
-    },
+    "home": "Store",
+    "stock": "Stock",
+    "product": "All Product",
     "logout": "Logout"
   },
-  "searchCompany": "Search Company...",
-  "company": "Company",
-  "startDate": "Start Date",
-  "endDate": "End Date",
-  "showInfo": "Show Information",
-  "location": "Location",
-  "searchLocation": "Search Locaton...",
-  "department": "Department",
-  "searchDepartment": "Search Department...",
-  "repairType": "RepairType",
-  "searchRepairType": "Search RepairType...",
-  "deletedRepairHistoryTask": "Remove All Repair Task",
-  "deletedRepairHistoryTaskByRepairId": "Remove Repair Task",
-  "search": "Search",
-  "plsWait": "Please wait...",
-  "confirmDialog": {
-    "msgDefault": "Do you want to confirm?",
-    "yes": "Confirm",
-    "no": "Cancel"
-  },
-  "twoFADialog": {
-    "title": "ยืนยันตัวตนสองขั้น",
-    "subtitle": "Two-Factor Authentication Code",
-    "remark": "**If using it for the first time, please follow the steps below.**",
-    "step1": "1. Download Google Authenticator",
-    "step2": "2. Use Google authenticator to scan the QR code below.",
-    "yes": "ยืนยัน"
-  },
-  "otpDialog": {
-    "title": "Enter OTP",
-    "ref": "REF."
-  }
+  "createProduct": "Add Product",
+  "cancel": "Cancel",
+  "add": "Add",
+  "productName": "Product Name",
+  "productPrice": "Product Price",
+  "productQuantity": "Product Quantity",
+  "productImage": "Product Image"
 }
