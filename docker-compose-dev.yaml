@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16.2-alpine3.19
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${PASSWORD}
+      - POSTGRES_USER=${USERNAME}
+      - POSTGRES_DB=${DATABASE}
+      - TZ=GMT+7
+      - PGTZ=GMT+7
+    env_file:
+      - ./.env
+  kanoon-backend:
+    build:
+      context: backend
+      dockerfile: dev.dockerfile
+    container_name: kanoon-backend
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+    env_file:
+      - ./backend/.env
+volumes:
+  postgres:
+    driver: local
+  backend:
+    driver: local
+  backend-node-modules:
+    driver: local
+
+networks:
+  default:
+    name: kanoon_default
+    external: true
+    driver: bridge
