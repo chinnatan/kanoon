@@ -1,0 +1,58 @@
+{
+  "appName": "Kanoon",
+  "username": "ชื่อผู้ใช้งาน",
+  "password": "รหัสผ่าน",
+  "login": "เข้าสู่ระบบ",
+  "msgError": {
+    "plsInputUsernamePassword": "กรุณากรอกชื่อผู้ใช้งานหรือรหัสผ่านให้ครบถ้วน",
+    "dataNotFound": "ไม่พบข้อมูล",
+    "plsSelectCompany": "กรุณาเลือกบริษัท",
+    "plsSelectStartDate": "กรุณาเลือกวันที่เริ่มต้น",
+    "plsSelectEndDate": "กรุณาเลือกวันที่สิ้นสุด",
+    "plsSelectValidDateRange": "กรุณาเลือกช่วงวันที่ให้ถูกต้อง",
+    "plsInputTwoFactorAuthenticationCode": "กรุณาใส่รหัสผ่านสำหรับยืนยันตัวตนสองขั้น",
+    "passwordIncorrect": "รหัสผ่านไม่ถูกต้อง"
+  },
+  "menuName": {
+    "home": "หน้าแรก",
+    "repair": "งานซ่อม",
+    "helpDesk": {
+      "head": "Help Desk",
+      "dashboard": "แดชบอร์ด",
+      "report": "แจ้งปัญหา"
+    },
+    "logout": "ออกจากระบบ"
+  },
+  "searchCompany": "ค้นหาบริษัท...",
+  "company": "บริษัท",
+  "startDate": "วันที่เริ่มต้น",
+  "endDate": "วันที่สิ้นสุด",
+  "showInfo": "แสดงข้อมูล",
+  "location": "สถานที่ตั้ง",
+  "searchLocation": "ค้นหาสถานที่ตั้ง...",
+  "department": "แผนก",
+  "searchDepartment": "ค้นหาแผนก...",
+  "repairType": "ประเภทใบงานซ่อม",
+  "searchRepairType": "ค้นหาประเภทใบงานซ่อม...",
+  "deletedRepairHistoryTask": "ลบงานซ่อมทั้งหมด",
+  "deletedRepairHistoryTaskByRepairId": "ลบงานซ่อม",
+  "search": "ค้นหา",
+  "plsWait": "กรุณารอสักครู่...",
+  "confirmDialog": {
+    "msgDefault": "คุณต้องการยืนยันหรือไม่",
+    "yes": "ยืนยัน",
+    "no": "ยกเลิก"
+  },
+  "twoFADialog": {
+    "title": "ยืนยันตัวตนสองขั้น",
+    "subtitle": "Two-Factor Authentication Code",
+    "remark": "**หากใช้งานครั้งแรกกรุณาทำตามขั้นตอนด้านล่าง**",
+    "step1": "1. โหลด Google Authenticator",
+    "step2": "2. เปิด Google Authenticator เพื่อสแกน QR Code ด้านล่าง",
+    "yes": "ยืนยัน"
+  },
+  "otpDialog": {
+    "title": "กรอกรหัส OTP",
+    "ref": "รหัสอ้างอิง"
+  }
+}
