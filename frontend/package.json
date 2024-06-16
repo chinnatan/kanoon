@@ -1,14 +1,15 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "vite --port=8080",
+    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",
+    "axios": "^1.7.2",
     "core-js": "^3.34.0",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
@@ -18,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/types": "^7.24.0",
-    "@types/node": "^20.11.25",
+    "@types/node": "^20.14.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-typescript": "^13.0.0",
     "eslint": "^8.57.0",

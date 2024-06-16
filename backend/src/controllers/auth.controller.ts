@@ -8,17 +8,21 @@ import Store from "../models/db/Store";
 import sequelize from "../config/database";
 import AuthUtil from "../utils/auth.util";
 import { UserModel } from "../models/user.model";
+import { logger } from "../utils/logger.util";
 
 export const register = async (req: Request, res: Response) => {
   const h = new Handle("register", req, res);
   const t = await sequelize.transaction();
   try {
-    const { username, password, role, store_name } = req.body;
+    const { username, password, fullname, role, store_name } = req.body;
     if (!username) {
       throw new ServerException("กรุณากรอกชื่อผู้ใช้งาน", 400);
     }
     if (!password) {
       throw new ServerException("กรุณากรอกรหัสผ่าน", 400);
+    }
+    if (!fullname) {
+      throw new ServerException("กรุณากรอกชื่อและนามสกุล", 400);
     }
     if (!role) {
       throw new ServerException("กรุณากรอกตำแหน่ง", 400);
@@ -36,6 +40,7 @@ export const register = async (req: Request, res: Response) => {
       {
         username,
         password: hashedPassword,
+        fullname: fullname,
         role,
         store_id: store?.id,
       },
@@ -54,6 +59,7 @@ export const register = async (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
   const h = new Handle("login", req, res);
   try {
+    logger.info("%s", req.body);
     const { username, password } = req.body;
     if (!username || !password) {
       throw new ServerException("กรุณากรอกชื่อผู้ใช้งานและรหัสผ่านให้ครบถ้วน", 400);
@@ -79,7 +85,7 @@ export const login = async (req: Request, res: Response) => {
       throw new ServerException("รหัสผ่านไม่ถูกต้อง", 400);
     }
 
-    let userInfo = new UserModel(user.id, user.username, user.role, user.store_id, user.store.name);
+    let userInfo = new UserModel(user.id, user.username, user.fullname, user.role, user.store_id, user.store.name);
     const token = AuthUtil.generateToken(user);
     const refreshToken = AuthUtil.generateRefreshToken(user);
 
@@ -98,7 +104,7 @@ export const refreshToken = async (req: Request, res: Response) => {
   const h = new Handle("refreshToken", req, res);
   try {
     const oldRefreshToken = await User.findOne({
-      attributes: ['refresh_token'],
+      attributes: ["refresh_token"],
       where: {
         id: req.user.id,
       },
@@ -124,7 +130,7 @@ export const refreshToken = async (req: Request, res: Response) => {
 
       await AuthUtil.updateRefreshToken(refreshToken, req.user.id);
 
-      return  h.success({
+      return h.success({
         token: accessToken,
         refresh_token: refreshToken,
       });

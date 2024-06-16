@@ -4,3 +4,4 @@ backend/package-lock.json
 backend/node_modules
 
 create_table.sql
+create_table.sql

@@ -5,6 +5,7 @@ interface UserInstance extends Model {
   id: number;
   username: string;
   password: string;
+  fullname: string;
   role: string;
   refresh_token: string;
 }
@@ -23,6 +24,10 @@ const User = sequelize.define<UserInstance>(
       allowNull: false,
     },
     password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    fullname: {
       type: DataTypes.STRING,
       allowNull: false,
     },

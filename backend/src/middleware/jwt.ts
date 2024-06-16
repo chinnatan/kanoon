@@ -18,7 +18,7 @@ export const auth = (req: Request, res: Response, next: NextFunction) => {
     logger.info(token);
     const verified = jwt.verify(token, JWT_SECRET_KEY);
     const jsonParse = JSON.parse(JSON.stringify(verified));
-    const userInfo = new UserModel(jsonParse.id, jsonParse.username, jsonParse.role, jsonParse.store_id, jsonParse.store_name);
+    const userInfo = new UserModel(jsonParse.id, jsonParse.username, jsonParse.fullname, jsonParse.role, jsonParse.store_id, jsonParse.store_name);
     req.user = userInfo;
     next();
   } catch (err) {

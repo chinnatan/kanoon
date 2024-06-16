@@ -8,8 +8,14 @@ import { logger } from "./src/utils/logger.util";
 
 const app = express();
 
+const origin = process.env.NODE_ENV === "development" ? ["http://localhost:8080"] : []
+const corsConfig = {
+  origin: origin,
+  credentials: true
+};
+
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsConfig));
 
 import authRoute from "./src/routes/auth.route";
 app.use("/auth", authRoute);

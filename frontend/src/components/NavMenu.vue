@@ -29,12 +29,14 @@
 
       <v-spacer></v-spacer>
       <label class="white--text"> {{ fullname }} </label>
-      <v-icon class="ma-2 white--text" @click="logout()">mdi-logout</v-icon>
+      <v-icon class="ma-2 white--text" @click="onLogout">mdi-logout</v-icon>
     </v-app-bar>
   </div>
 </template>
 
 <script lang="ts">
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "NavMenu",
   props: {
@@ -47,6 +49,11 @@ export default {
     return {
       drawer: true,
     };
+  },
+  methods: {
+    ...mapActions({
+      onLogout: "user/logout",
+    }),
   },
 };
 </script>

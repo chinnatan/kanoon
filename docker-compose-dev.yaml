@@ -31,12 +31,21 @@ services:
       - postgres
     env_file:
       - ./backend/.env
+  kanoon-frontend:
+    build:
+      context: frontend
+      dockerfile: dev.dockerfile
+    container_name: kanoon-frontend
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - kanoon-backend
 volumes:
   postgres:
-    driver: local
-  backend:
-    driver: local
-  backend-node-modules:
     driver: local
 
 networks:
